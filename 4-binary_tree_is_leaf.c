@@ -6,7 +6,8 @@
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-	if (node->left != NULL || node->right != NULL || node == NULL)
+	if (node->left != NULL || node->right != NULL || node == NULL ||
+							node->parent != NULL)
 		return (0);
 	return (1);
 }
